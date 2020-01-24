@@ -16,7 +16,13 @@ let package = Package(
         .target(
             name: "SwiftPackageSample",
             dependencies: ["Alamofire"],
-            path: "Code"
+            path: "Code",
+            
+            swiftSettings: [
+                .unsafeFlags([
+                    "-acp-os=medium"
+                ])
+            ]
         )
     ],
     swiftLanguageVersions: [.v5]
